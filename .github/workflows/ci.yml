@@ -1,0 +1,69 @@
+name: Apex CI
+
+on: [push, pull_request]
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Verify repository structure
+        run: |
+          echo "Checking repository structure..."
+          
+          if [ ! -d "docs" ]; then
+            echo "ERROR: /docs folder is missing!"
+            exit 1
+          fi
+          echo "✅ /docs folder found"
+          
+          if [ ! -f "docs/ERD_Apex.png" ] && [ ! -f "docs/ERD_Apex.pdf" ]; then
+            echo "ERROR: ERD file missing in /docs"
+            exit 1
+          fi
+          echo "✅ ERD file found"
+          
+          if [ ! -f "docs/ApexCircuit.sql" ]; then
+            echo "ERROR: ApexCircuit.sql missing in /docs"
+            exit 1
+          fi
+          echo "✅ SQL script found"
+          
+          if [ ! -f "docs/API_Endpoint_Plan.md" ] && [ ! -f "docs/API_Endpoint_Plan.pdf" ] && [ ! -f "docs/SECTION B.pdf" ]; then
+            echo "ERROR: API Endpoint Plan missing in /docs"
+            exit 1
+          fi
+          echo "✅ API Endpoint Plan found"
+          
+          if [ ! -f "README.md" ]; then
+            echo "ERROR: README.md is missing!"
+            exit 1
+          fi
+          echo "✅ README.md found"
+          
+          echo ""
+          echo "========================================"
+          echo "All required files verified successfully!"
+          echo "========================================"
+          
+      - name: Validate SQL syntax
+        run: |
+          if grep -q "CREATE DATABASE" docs/ApexCircuit.sql; then
+            echo "✅ CREATE DATABASE found"
+          else
+            echo "ERROR: CREATE DATABASE missing"
+            exit 1
+          fi
+          
+          TABLE_COUNT=$(grep -c "CREATE TABLE" docs/ApexCircuit.sql)
+          echo "✅ Found $TABLE_COUNT tables"
+          
+          if [ "$TABLE_COUNT" -lt 6 ]; then
+            echo "ERROR: Expected at least 6 tables, found $TABLE_COUNT"
+            exit 1
+          fi
+          
+          echo "SQL validation passed!"
