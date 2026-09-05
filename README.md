@@ -30,7 +30,7 @@ ApexCircuit/
 
 ![Apex CI](https://github.com/YOURUSERNAME/ApexCircuit/actions/workflows/ci.yml/badge.svg)
 
-*(Replace YOURUSERNAME with your actual GitHub username)*
+
 
 ## YouTube Video
 
