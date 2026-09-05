@@ -28,13 +28,13 @@ ApexCircuit/
 
 ## CI/CD Status
 
-![Apex CI](https://github.com/YOURUSERNAME/ApexCircuit/actions/workflows/ci.yml/badge.svg)
+![Apex CI](https://github.com/Tebogo4003/ApexCircuit/actions/workflows/ci.yml/badge.svg)
 
 
 
 ## YouTube Video
 
-[Watch the video presentation here]
+https://youtu.be/1gKVVswJtCg
 
 ## Database
 
