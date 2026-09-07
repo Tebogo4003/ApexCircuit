@@ -1,0 +1,3 @@
+GitHub: https://github.com/Tebogo4003/ApexCircuit
+YouTube: https://youtu.be/1gKVVswJtCg
+ERD: Included as docs/ERD_Apex.png
