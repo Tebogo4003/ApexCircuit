@@ -13,7 +13,7 @@ A full-stack web-based event management system for the South African road runnin
 
 ## YouTube Video
 
-[Watch the video presentation here](https://youtu.be/1gKVVswJtCg)
+[Watch the video presentation here] https://youtu.be/1gKVVswJtCg
 
 ## Database
 
