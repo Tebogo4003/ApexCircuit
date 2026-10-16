@@ -1,0 +1,4 @@
+Replace this file with a screenshot of your successful GitHub Actions green build.
+Save it as docs/ci-green-build.png and reference it in the README.md:
+
+![Green Build](docs/ci-green-build.png)
