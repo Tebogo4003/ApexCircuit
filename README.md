@@ -1,21 +1,28 @@
-# Apex Predator Circuit (RaceDay)
+# ApexCircuit / RaceDay — Combined Project
 
-A full-stack web-based event management system for the South African road running, walking, and cycling community.
+This folder combines **Part 1 (Apex Predator Circuit documentation and SQL design)** with **Part 2 (ASP.NET Core Web API and tests)**.
 
-## User Roles
+## Project structure
 
-- **Organiser**: Can create, edit, and delete events, manage event categories, capture participant results, and view all event enrolments.
-- **Participant**: Can create an account, browse events, enter an event by selecting a category, view their own enrolments, and track their personal results.
+- `RaceDay.sln` — open this solution in Visual Studio.
+- `RaceDay.API/` — .NET 8 Web API implementation.
+- `RaceDay.Tests/` — automated tests.
+- `docs/Part1/` — Part 1 README materials, ERD, SQL script, API endpoint plan, and assignment PDFs.
+- `.github/workflows/ci.yml` — Part 2 CI workflow.
 
-## CI/CD Status
+## Open and run in Visual Studio
 
-![Apex CI](https://github.com/Tebogo4003/ApexCircuit/actions/workflows/ci.yml/badge.svg)
+1. Extract this ZIP to a normal folder.
+2. Open `RaceDay.sln` in Visual Studio 2022 or newer with the **ASP.NET and web development** workload installed.
+3. In `RaceDay.API/appsettings.json`, update `ConnectionStrings:DefaultConnection` for your SQL Server instance.
+4. Restore NuGet packages, then build the solution.
+5. Set `RaceDay.API` as the startup project and run it.
+6. In Development, open `/swagger` on the launch URL shown by Visual Studio.
 
-## YouTube Video
+## Database notes
 
-[Watch the video presentation here] https://youtu.be/1gKVVswJtCg
+Part 1's SQL design is preserved at `docs/Part1/docs/ApexCircuit.sql`. It creates a database named `ApexCircuitDB` with Roles, Users, Events, Categories, Enrolments, and Results. Part 2 uses Entity Framework Core Code-First and the connection string in `RaceDay.API/appsettings.json`. **Do not run the Part 1 SQL script and EF migrations against the same database without first checking the schema**; they represent two ways of defining the database and may conflict.
 
-## Database
+## Important integration note
 
-- **Database Name**: `ApexCircuitDB`
-- **Tables**: Roles, Users, Events, Categories, Enrolments, Results
+Part 1's ZIP contains project documentation and SQL assets, not a separate web application source project. Part 2 supplies the runnable API and test solution, so the combined package keeps Part 2's code intact and includes Part 1's assets without overwriting files. The API implementation and SQL schema should still be checked together before submission or deployment.
