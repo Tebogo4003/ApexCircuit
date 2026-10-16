@@ -1,28 +1,90 @@
-# ApexCircuit / RaceDay — Combined Project
+ApexCircuit
 
-This folder combines **Part 1 (Apex Predator Circuit documentation and SQL design)** with **Part 2 (ASP.NET Core Web API and tests)**.
+Project Overview
 
-## Project structure
+ApexCircuit is a software development project combining Part 1 and Part 2 into one project repository. This repository contains the project files and source code for both parts.
 
-- `RaceDay.sln` — open this solution in Visual Studio.
-- `RaceDay.API/` — .NET 8 Web API implementation.
-- `RaceDay.Tests/` — automated tests.
-- `docs/Part1/` — Part 1 README materials, ERD, SQL script, API endpoint plan, and assignment PDFs.
-- `.github/workflows/ci.yml` — Part 2 CI workflow.
+The purpose of this repository is to keep the project organised, maintain the source code in one place, and make the work accessible for development, review, and submission.
 
-## Open and run in Visual Studio
+Project Parts
 
-1. Extract this ZIP to a normal folder.
-2. Open `RaceDay.sln` in Visual Studio 2022 or newer with the **ASP.NET and web development** workload installed.
-3. In `RaceDay.API/appsettings.json`, update `ConnectionStrings:DefaultConnection` for your SQL Server instance.
-4. Restore NuGet packages, then build the solution.
-5. Set `RaceDay.API` as the startup project and run it.
-6. In Development, open `/swagger` on the launch URL shown by Visual Studio.
+Part 1
 
-## Database notes
+Contains the original ApexCircuit project files and implementation.
 
-Part 1's SQL design is preserved at `docs/Part1/docs/ApexCircuit.sql`. It creates a database named `ApexCircuitDB` with Roles, Users, Events, Categories, Enrolments, and Results. Part 2 uses Entity Framework Core Code-First and the connection string in `RaceDay.API/appsettings.json`. **Do not run the Part 1 SQL script and EF migrations against the same database without first checking the schema**; they represent two ways of defining the database and may conflict.
+Part 2 — RaceDay
 
-## Important integration note
+Contains the additional project files for Part 2, integrated into the combined project folder.
 
-Part 1's ZIP contains project documentation and SQL assets, not a separate web application source project. Part 2 supplies the runnable API and test solution, so the combined package keeps Part 2's code intact and includes Part 1's assets without overwriting files. The API implementation and SQL schema should still be checked together before submission or deployment.
+Project Objectives
+
+* Maintain Part 1 and Part 2 in one organised repository.
+* Keep the source code and supporting project files together.
+* Make the project easier to review and maintain.
+* Use GitHub for source code hosting and version control.
+* Provide a central location for the combined project.
+
+Technologies and Tools
+
+The technologies used should be identified from the actual project files.
+
+Development and project management tools may include:
+
+* GitHub — source code hosting and version control.
+* Visual Studio — project development and testing, if applicable.
+
+Project Structure
+
+The repository contains the files for the combined ApexCircuit project, including the original Part 1 files and the additional Part 2 files.
+
+The exact folder structure depends on the project’s existing solution and directory organisation.
+
+Getting Started
+
+1. Download the Project
+
+Open the repository on GitHub:
+
+https://github.com/Tebogo4003/ApexCircuit
+
+Select Code, then Download ZIP.
+
+2. Extract the Files
+
+Extract the downloaded ZIP file to a folder on your computer.
+
+3. Open the Project
+
+Locate the appropriate solution or project file and open it using the development environment required by the project.
+
+If the project uses Visual Studio and contains a .sln file, open that solution file.
+
+4. Build and Run
+
+Restore any required dependencies, build the project, and run it using the appropriate development environment.
+
+Resolve any build errors before attempting to use the application.
+
+Testing
+
+The combined project should be built and tested to verify that the files are correctly integrated and that the required functionality works.
+
+Testing status should be updated after the project has been run and verified.
+
+Version Control
+
+GitHub is used to store the project files and track changes through commits.
+
+Commit messages should describe the changes made, such as adding Part 2 files, updating documentation, or fixing verified issues.
+
+Author
+
+Tebogo Mashego
+
+Repository
+
+https://github.com/Tebogo4003/ApexCircuit
+
+Project Status
+
+Combined project repository prepared for review and further verification. Successful execution and the functionality of both project parts must be confirmed through testing.
